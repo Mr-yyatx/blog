@@ -1,8 +1,6 @@
 import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { isTest } from '@/utils/tools'
-
 import C from '@/components'
 
 // 在普通JS文件中，使用多语言
@@ -11,19 +9,18 @@ console.log(i18n.t('home.message'))
 
 const Home: FC = () => {
   const { t } = useTranslation()
-  isTest()
 
   return (
     <div className="App">
       <div className="logo" />
       this is web home page12 <Link to="/about">about</Link>
-      <br/>
+      <br />
       <C.WebHomeCount />
-      <br/>
+      <br />
       {t('home.home', 'Home')}
-      <br/>
+      <br />
       {t('home.welcome', 'Welcome', { name: 'fungleo' })}
-      <br/>
+      <br />
       <span style={{ whiteSpace: 'pre-line' }}>{t('home.message')}</span>
     </div>
   )
